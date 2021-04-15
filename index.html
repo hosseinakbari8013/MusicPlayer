@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/plugins/Bootstrap/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="assets/icon/material-design-iconic-font/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="assets/icon/font-awsoem/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/plugins/Swiper/css/swiper.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <style id="style"></style>
+</head>
+<body onload="loadedPage()" class="bg-blur-image vh-100">
+<div class="preload show">
+
+</div>
+
+<div class="w-100 bg-blur-image vh-100">
+    <div class="container-fluid ">
+        <div class="row ">
+            <div class="col-xl-4 col-lg-4 col-md-5 col-sm-6 col-12 mx-auto">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <audio class="d-none"
+                                           preload="none" Track-name="Duydum ki bensiz" Track-artist="Grup Roj" ondurationchange="UpdateDuration()" ontimeupdate="SeekBar()" >
+                                        <source src="https://dl.baarzesh.net/music/2020/9/Duydum_ki_Bensiz_Yaral%C4%B1_Gibisin_128.mp3" type="audio/mpeg">
+                                    </audio>
+                                    <div class="w-100 swiper-content">
+                                        <div class="music-card-item">
+                                            <img class="w-100" src="Res/Image/Duydum%20ki%20bensiz.jpg" alt="">
+                                            <button class="btn-hide btn-like"><span class="fa fa-heart"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <audio class="d-none"
+                                           preload="none" Track-name="Six Feet Under" Track-artist="Billie Eilish" ondurationchange="UpdateDuration()" ontimeupdate="SeekBar()" >
+                                        <source src="https://bedunim.ir/wp-content/uploads/2018/06/Billie-Eilish-Six-Feet-Under-1.mp3" type="audio/mpeg">
+                                    </audio>
+                                    <div class="w-100 swiper-content">
+                                        <div class="music-card-item">
+                                            <img class="w-100" src="Res/Image/Six%20Feet%20Under.jpg" alt="">
+                                            <button class="btn-hide btn-like"><span class="fa fa-heart"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <audio class="d-none"
+                                           preload="none" Track-name="Hymn For The Weekend" Track-artist="Cold Play" ondurationchange="UpdateDuration()" ontimeupdate="SeekBar()" >
+                                        <source src="https://ts2.tarafdari.com/contents/user6984/content-sound/01_-_hymn_for_the_weekend.mp3" type="audio/mpeg">
+                                    </audio>
+                                    <div class="w-100 swiper-content">
+                                        <div class="music-card-item">
+                                            <img class="w-100" src="Res/Image/Hymn-For-The-Weekend.jpg" alt="">
+                                            <button class="btn-hide btn-like"><span class="fa fa-heart"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <audio class="d-none"
+                                           preload="none" Track-name="Old Town Road" Track-artist="Lil Nas X" ondurationchange="UpdateDuration()" ontimeupdate="SeekBar()" >
+                                        <source src="http://download.enfamusic.ir/2020-11/Lil-Nas-X-Old-Town-Road-128.mp3" type="audio/mpeg">
+                                    </audio>
+                                    <div class="w-100 swiper-content">
+                                        <div class="music-card-item">
+                                            <img class="w-100" src="Res/Image/Old%20Town%20Road.jpg" alt="">
+                                            <button class="btn-hide btn-like"><span class="fa fa-heart"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 bg-bars px-2 pt-4">
+                    <div class="row text-center music-ditale">
+                        <div class="col-12">
+                            <h3 class="MusicName"></h3>
+                            <p class="MusicArtist"></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <input type="range" oninput="UpdateMusic()" disabled  min="0" max="100" value="0" class="slider" id="seekbar">
+                        </div>
+                    </div>
+                    <div class="row text-center pt-4">
+                        <div class="col-12 py-3">
+                            <div class="row">
+                                <div class="col-4">
+                                    <button class="btn-hide btn-prev"><span class="zmdi zmdi-skip-previous"></span></button>
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn-hide btn-p pause"><span class="zmdi zmdi-play"></span></button>
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn-hide btn-next"><span class="zmdi zmdi-skip-next"></span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/plugins/Swiper/js/swiper.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+    let Lastaudio = null;
+    let a = null;
+    let MusicName = $('.MusicName');
+    let MusicArtist = $('.MusicArtist');
+    let seekbar = document.getElementById('seekbar')
+    var swiper = new Swiper('.swiper-container',{
+        navigation: {
+            nextEl: '.btn-next',
+            prevEl: '.btn-prev',
+        }
+    });
+
+    $('#style').html('.bg-blur-image::before{background-image:url(assets/image/ecc_screen.jpg)}');
+    swiper.on('slideChange', function () {
+        var swiperItems = document.querySelectorAll('.swiper-slide');
+        $('#style').html('.bg-blur-image::before{background-image:url(' + $(' img', swiperItems[swiper.realIndex]).attr('src') + ')}');
+        var audio = $(' audio ',swiperItems[swiper.realIndex]).get(0);
+        player(audio);
+    })
+
+    var swiperItems = document.querySelectorAll('.swiper-slide');
+    $('#style').html('.bg-blur-image::before{background-image:url(' + $(' img', swiperItems[0]).attr('src') + ')}');
+    var audio = $(' audio ',swiperItems[0]).get(0);
+    audio.currentTime=0;
+    seekbar.value = 0;
+    a = audio;
+    MusicName.html($(' audio',swiperItems[0]).attr('Track-name'))
+    MusicArtist.html($(' audio',swiperItems[0]).attr('Track-artist'))
+    Lastaudio = audio;
+
+    function player(audio) {
+        audio.currentTime=0;
+        if(Lastaudio!=null) {
+            Lastaudio.pause();
+            Lastaudio.currentTime=0;
+        }
+        if(!isNaN(audio.duration)) seekbar.max=audio.duration;
+        audio.play();
+        $(seekbar).removeAttr('disabled');
+        $('.btn-p').addClass('play').removeClass('pause')
+        $('.btn-p .zmdi').addClass('zmdi-pause').removeClass('zmdi-play');
+        seekbar.value = 0;
+        a = audio;
+        Lastaudio = audio;
+    }
+
+    function SeekBar() {
+        seekbar.value = a.currentTime;
+        if(a.currentTime===a.duration){
+            EndMusic();
+        }
+    }
+
+    function UpdateMusic(){
+        a.currentTime = seekbar.value;
+        if(a.currentTime===a.duration){
+            EndMusic();
+        }
+    }
+
+    function UpdateDuration(){
+        seekbar.max = a.duration-1;
+        console.log(a.duration);
+    }
+
+    function EndMusic(){
+        a.currentTime=0;
+        seekbar.value=0;
+        a.pause();
+        $('.btn-p').addClass('pause').removeClass('play')
+        $('.btn-p .zmdi').addClass('zmdi-play').removeClass('zmdi-pause');
+    }
+
+    $('.btn-p').click(function () {
+       if($(this).hasClass('pause')){
+           a.play();
+           $(seekbar).removeAttr('disabled');
+           $(this).addClass('play').removeClass('pause')
+           $(' .zmdi',this).addClass('zmdi-pause').removeClass('zmdi-play');
+       }else{
+           a.pause();
+           $(seekbar).attr('disabled','disabled');
+           $(this).addClass('pause').removeClass('play')
+           $(' .zmdi',this).addClass('zmdi-play').removeClass('zmdi-pause');
+       }
+    })
+
+    window.onbeforeunload = function (e) {
+        var e = e || window.event;
+        //IE & Firefox
+        if (e) {
+            e.returnValue = 'Are you sure?';
+        }
+        // For Safari
+        return 'Are you sure?';
+    };
+</script>
+
+</body>
+</html>
