@@ -1,9 +1,9 @@
 # MusicPlayer
 This is a sample project fore a Music Player
-####Get Started
+##Get Started
 ```$xslt
 git clone https://github.com/hosseinakbari8013/MusicPlayer.git
 ```
 * Now ready project to GO
-#####Info
+###Info
 [Instagram](https://instagram.com/hossein_akbari_1382)
