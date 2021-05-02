@@ -137,6 +137,8 @@
         var swiperItems = document.querySelectorAll('.swiper-slide');
         $('#style').html('.bg-blur-image::before{background-image:url(' + $(' img', swiperItems[swiper.realIndex]).attr('src') + ')}');
         var audio = $(' audio ',swiperItems[swiper.realIndex]).get(0);
+        MusicName.html($(' audio',swiperItems[swiper.realIndex]).attr('Track-name'))
+        MusicArtist.html($(' audio',swiperItems[swiper.realIndex]).attr('Track-artist'))
         player(audio);
     })
 
